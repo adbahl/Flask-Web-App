@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<!-- Uses a if statement to set title or get default title-->
+	{%if title%}
+	<title>Home Page - {{title}}</title>
+	{%else%}
+	<title>
+	</head>
+	
+	<body>	
+	<h1>Home Page</h1>
+	<br>
+	<!-- Uses a for loop to get content from dictionary-->
+	{% for post in posts%}
+		<h1>{{post.title}}</h1>
+		<p>By {{post.author}} on {{post.date}}</p>
+		<p>{{post.content}}</p>
+	{% endfor %}	
+	</body>
+
+</html>
